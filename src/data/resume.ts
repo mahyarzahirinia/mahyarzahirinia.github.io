@@ -53,6 +53,15 @@ export type Project = {
   tech: readonly string[];
 };
 
+export type Note = {
+  title: string;
+  category: string;
+  summary: string;
+  takeaway: string;
+  readTime: string;
+  tags: readonly string[];
+};
+
 export type Expertise = {
   title: string;
   icon: LucideIcon;
@@ -99,6 +108,12 @@ export const resume = {
           "Projects with reusable architecture and measurable product outcomes.",
         description:
           "A focused sample of production and public work showing reusable UI systems, PWA delivery, SEO, performance, and enterprise content tooling.",
+      },
+      notes: {
+        eyebrow: "Field Notes",
+        title: "Small lessons worth keeping close.",
+        description:
+          "Personal observations, practical tricks, and patterns collected while building software—from language details to interface architecture.",
       },
       knowledge: {
         eyebrow: "Knowledge",
@@ -342,6 +357,48 @@ export const resume = {
       tech: ["Next.js", "React", "SEO", "Jest", "React Testing Library"],
     },
   ] satisfies Project[],
+  notes: [
+    {
+      title: "Prefer boring boundaries and interesting internals",
+      category: "Software Design",
+      summary:
+        "A module is easier to adopt when its public contract is predictable, even if the implementation behind it is sophisticated.",
+      takeaway:
+        "Spend complexity inside the boundary; keep inputs, outputs, and failure modes unsurprising.",
+      readTime: "2 min",
+      tags: ["API Design", "Architecture"],
+    },
+    {
+      title: "Type the decision, not only the data",
+      category: "TypeScript",
+      summary:
+        "Discriminated unions can document valid product states more clearly than several optional booleans ever will.",
+      takeaway:
+        "If two states cannot happen together in the product, make them impossible together in the type system.",
+      readTime: "3 min",
+      tags: ["Types", "State"],
+    },
+    {
+      title: "A component API is a product surface",
+      category: "Design Systems",
+      summary:
+        "Reusable UI succeeds when the next developer can discover the right path without reading the implementation.",
+      takeaway:
+        "Optimize component props for clarity, constraints, and useful defaults before optimizing for maximum flexibility.",
+      readTime: "4 min",
+      tags: ["Components", "DX"],
+    },
+    {
+      title: "Performance work starts with a budget",
+      category: "Web Performance",
+      summary:
+        "Optimization becomes repeatable when a team agrees on measurable limits for loading, interaction, and visual stability.",
+      takeaway:
+        "Define the threshold first, measure real users, then optimize the largest constraint instead of chasing every metric.",
+      readTime: "3 min",
+      tags: ["Core Web Vitals", "Delivery"],
+    },
+  ] satisfies Note[],
   education: {
     degree: "Bachelor of Science in Information Technology",
     institution: "University of Shahab Danesh",
@@ -364,6 +421,7 @@ export const resume = {
     { id: "profile", label: "Profile" },
     { id: "experience", label: "Experience" },
     { id: "projects", label: "Projects" },
+    { id: "notes", label: "Notes" },
     { id: "education", label: "Education" },
     { id: "skills", label: "Skills" },
     { id: "contact", label: "Contact" },
@@ -415,6 +473,12 @@ export const resumes = {
           title: "پروژه‌هایی با معماری قابل استفاده مجدد و نتیجه قابل اندازه‌گیری.",
           description:
             "نمونه‌ای متمرکز از کارهای production و عمومی در سیستم‌های UI قابل استفاده مجدد، PWA، SEO، پرفورمنس و ابزارهای محتوایی سازمانی.",
+        },
+        notes: {
+          eyebrow: "یادداشت‌های شخصی",
+          title: "درس‌های کوچکی که ارزش به خاطر سپردن دارند.",
+          description:
+            "نکته‌ها، ترفندها و الگوهای کاربردی که هنگام ساخت نرم‌افزار جمع‌آوری شده‌اند؛ از جزئیات زبان تا معماری رابط کاربری.",
         },
         knowledge: {
           eyebrow: "دانش تخصصی",
@@ -634,6 +698,48 @@ export const resumes = {
         tech: ["Next.js", "React", "SEO", "Jest", "React Testing Library"],
       },
     ],
+    notes: [
+      {
+        title: "مرزهای ساده، پیاده‌سازی هوشمند",
+        category: "طراحی نرم‌افزار",
+        summary:
+          "وقتی قرارداد عمومی یک ماژول قابل پیش‌بینی باشد، استفاده از آن آسان‌تر است؛ حتی اگر پیاده‌سازی داخلی پیچیده باشد.",
+        takeaway:
+          "پیچیدگی را داخل مرز نگه دارید و ورودی، خروجی و خطاها را قابل پیش‌بینی طراحی کنید.",
+        readTime: "۲ دقیقه",
+        tags: ["طراحی API", "معماری"],
+      },
+      {
+        title: "تصمیم را تایپ کنید، نه فقط داده را",
+        category: "TypeScript",
+        summary:
+          "Discriminated unionها وضعیت‌های معتبر محصول را بسیار روشن‌تر از چند boolean اختیاری مستند می‌کنند.",
+        takeaway:
+          "اگر دو وضعیت در محصول نمی‌توانند هم‌زمان رخ دهند، در سیستم نوع هم وقوع هم‌زمان آن‌ها را غیرممکن کنید.",
+        readTime: "۳ دقیقه",
+        tags: ["Types", "State"],
+      },
+      {
+        title: "API کامپوننت یک سطح محصول است",
+        category: "Design Systems",
+        summary:
+          "UI قابل استفاده مجدد زمانی موفق است که توسعه‌دهنده بعدی بدون خواندن پیاده‌سازی، مسیر درست را پیدا کند.",
+        takeaway:
+          "پیش از انعطاف‌پذیری نامحدود، propها را برای وضوح، محدودیت‌های مفید و پیش‌فرض‌های مناسب طراحی کنید.",
+        readTime: "۴ دقیقه",
+        tags: ["Components", "DX"],
+      },
+      {
+        title: "کار پرفورمنس با بودجه شروع می‌شود",
+        category: "Web Performance",
+        summary:
+          "بهینه‌سازی وقتی تکرارپذیر می‌شود که تیم برای بارگذاری، تعامل و پایداری بصری محدودیت‌های قابل اندازه‌گیری تعیین کند.",
+        takeaway:
+          "ابتدا آستانه را مشخص کنید، کاربران واقعی را بسنجید و سپس بزرگ‌ترین محدودیت را بهینه کنید.",
+        readTime: "۳ دقیقه",
+        tags: ["Core Web Vitals", "Delivery"],
+      },
+    ],
     education: {
       ...resume.education,
       degree: "کارشناسی فناوری اطلاعات",
@@ -656,6 +762,7 @@ export const resumes = {
       { id: "profile", label: "پروفایل" },
       { id: "experience", label: "تجربه" },
       { id: "projects", label: "پروژه‌ها" },
+      { id: "notes", label: "یادداشت‌ها" },
       { id: "education", label: "تحصیلات" },
       { id: "skills", label: "مهارت‌ها" },
       { id: "contact", label: "تماس" },

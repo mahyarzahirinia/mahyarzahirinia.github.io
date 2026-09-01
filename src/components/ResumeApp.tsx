@@ -9,6 +9,7 @@ import { ContactSection } from "./sections/ContactSection";
 import { EducationSection } from "./sections/EducationSection";
 import { ExperienceSection } from "./sections/ExperienceSection";
 import { HeroSection } from "./sections/HeroSection";
+import { NotesSection } from "./sections/NotesSection";
 import { ProjectsSection } from "./sections/ProjectsSection";
 import { SkillsSection } from "./sections/SkillsSection";
 
@@ -257,6 +258,7 @@ export function ResumeApp() {
         <HeroSection resumeData={currentResume} />
         <ExperienceSection resumeData={currentResume} />
         <ProjectsSection resumeData={currentResume} />
+        <NotesSection resumeData={currentResume} />
         <EducationSection resumeData={currentResume} />
         <SkillsSection resumeData={currentResume} />
         <ContactSection resumeData={currentResume} />
