@@ -28,13 +28,12 @@ export function ContactSection({ resumeData }: { resumeData: ResumeData }) {
       className="section-shell pb-6 sm:pb-8"
       aria-labelledby="contact-heading"
     >
-      <div className="relative overflow-hidden rounded-lg bg-slate-950 px-5 py-8 text-white shadow-[0_32px_100px_rgba(15,23,42,0.24)] sm:px-8 sm:py-10 lg:px-12 lg:py-12 dark:border dark:border-white/10 dark:bg-slate-950/82 dark:shadow-none">
-        <div className="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-cyan-400 via-emerald-300 to-rose-300" />
-        <div className="pointer-events-none absolute -end-24 -top-24 h-72 w-72 rounded-full bg-cyan-400/12 blur-3xl" />
+      <div className="relative overflow-hidden bg-[#171714] px-5 py-8 text-white shadow-[0_32px_100px_rgba(26,22,14,0.2)] sm:px-8 sm:py-10 lg:px-12 lg:py-14 dark:border dark:border-white/10 dark:bg-[#171714] dark:shadow-none">
+        <div className="absolute inset-y-0 start-0 w-1 bg-[#a97f3f]" />
 
         <div className="relative">
           <div className="flex flex-col gap-4 border-b border-white/12 pb-8 sm:flex-row sm:items-center sm:justify-between">
-            <p className="text-xs font-bold uppercase tracking-[0.18em] text-cyan-300">
+            <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#d4b071]">
               {header.eyebrow}
             </p>
             <p className="inline-flex w-fit max-w-full items-start gap-2 rounded-full border border-emerald-300/25 bg-emerald-300/10 px-3 py-1.5 text-xs font-semibold leading-5 text-emerald-200">
@@ -52,7 +51,7 @@ export function ContactSection({ resumeData }: { resumeData: ResumeData }) {
             <div className="min-w-0">
               <h2
                 id="contact-heading"
-                className="max-w-5xl text-4xl font-semibold leading-[1.08] tracking-[-0.025em] text-white sm:text-5xl lg:text-6xl"
+                className="font-editorial max-w-5xl text-5xl font-normal leading-[1.03] tracking-[-0.04em] text-white sm:text-6xl lg:text-7xl"
               >
                 {header.title}
               </h2>
@@ -64,7 +63,7 @@ export function ContactSection({ resumeData }: { resumeData: ResumeData }) {
             <div className="flex flex-col gap-3 sm:flex-row lg:flex-col xl:flex-row">
               <a
                 href={`mailto:${resumeData.personal.email}`}
-                className="inline-flex min-h-12 items-center justify-center gap-2 rounded-md bg-cyan-300 px-5 py-3 text-sm font-bold text-slate-950 transition hover:bg-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-cyan-300"
+                className="inline-flex min-h-12 items-center justify-center gap-2 bg-[#d4b071] px-5 py-3 text-sm font-bold text-[#171714] transition hover:bg-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#d4b071]"
               >
                 <Mail className="h-4 w-4" aria-hidden="true" />
                 {resumeData.ui.emailMohammad}
@@ -72,7 +71,7 @@ export function ContactSection({ resumeData }: { resumeData: ResumeData }) {
               <a
                 href={assetPath(resumeData.personal.resumeUrl)}
                 download
-                className="inline-flex min-h-12 items-center justify-center gap-2 rounded-md border border-white/20 bg-white/8 px-5 py-3 text-sm font-bold text-white transition hover:border-white/40 hover:bg-white/14 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-cyan-300"
+                className="inline-flex min-h-12 items-center justify-center gap-2 border border-white/20 bg-white/8 px-5 py-3 text-sm font-bold text-white transition hover:border-[#d4b071] hover:text-[#d4b071] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#d4b071]"
               >
                 <Download className="h-4 w-4" aria-hidden="true" />
                 {resumeData.ui.downloadResume}

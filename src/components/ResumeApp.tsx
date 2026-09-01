@@ -114,12 +114,12 @@ export function ResumeApp() {
   return (
     <div
       className={cn(
-        "min-h-screen overflow-x-hidden bg-[#f7f8fb] text-slate-950 dark:bg-[#05070c] dark:text-white",
+        "min-h-screen overflow-x-hidden bg-[#f2efe8] text-[#151512] dark:bg-[#11110f] dark:text-[#f1eee7]",
         isRtl && "font-persian",
       )}
       dir={currentResume.dir}
     >
-      <header className="fixed inset-x-0 top-0 z-50 border-b border-slate-900/10 bg-[#f7f8fb]/88 backdrop-blur-xl dark:border-white/10 dark:bg-[#05070c]/88">
+      <header className="fixed inset-x-0 top-0 z-50 border-b border-black/10 bg-[#f2efe8]/90 backdrop-blur-xl dark:border-white/10 dark:bg-[#11110f]/90">
         <nav
           className="mx-auto flex h-18 max-w-6xl items-center justify-between gap-2 px-4 sm:gap-4 sm:px-6 lg:px-8"
           aria-label={currentResume.ui.navAria}
@@ -128,10 +128,10 @@ export function ResumeApp() {
             href="#profile"
             className="group min-w-0 rounded-md focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-cyan-500"
           >
-            <span className="block text-xs font-bold uppercase tracking-[0.28em] text-slate-950 sm:hidden dark:text-white">
+            <span className="block text-xs font-bold uppercase tracking-[0.28em] text-[#151512] sm:hidden dark:text-[#f1eee7]">
               {brandMark}
             </span>
-            <span className="hidden truncate text-sm font-semibold text-slate-950 sm:block dark:text-white">
+            <span className="font-editorial hidden truncate text-lg text-[#151512] sm:block dark:text-[#f1eee7]">
               {currentResume.personal.name}
             </span>
             <span className="hidden truncate text-xs text-slate-500 sm:block dark:text-slate-400">
@@ -148,8 +148,8 @@ export function ResumeApp() {
                 className={cn(
                   "rounded-md px-2.5 py-2 text-xs font-semibold uppercase tracking-[0.12em] transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cyan-500 xl:px-3",
                   activeSection === item.id
-                    ? "text-cyan-700 dark:text-cyan-200"
-                    : "text-slate-500 hover:text-slate-950 dark:text-slate-400 dark:hover:text-white",
+                    ? "text-[#8b6a35] dark:text-[#d4b071]"
+                    : "text-[#777169] hover:text-[#151512] dark:text-[#99938a] dark:hover:text-white",
                 )}
               >
                 {item.label}
@@ -164,7 +164,7 @@ export function ResumeApp() {
               aria-label={
                 isDark ? currentResume.ui.themeLight : currentResume.ui.themeDark
               }
-              className="group inline-flex h-10 items-center justify-center gap-2 rounded-full border border-slate-300/80 bg-white/70 px-2.5 text-sm font-semibold text-slate-700 transition hover:border-cyan-500 hover:text-cyan-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cyan-500 dark:border-white/12 dark:bg-white/5 dark:text-slate-200 dark:hover:border-cyan-300 dark:hover:text-cyan-100"
+              className="group inline-flex h-10 items-center justify-center gap-2 rounded-full border border-black/15 bg-white/30 px-2.5 text-sm font-semibold text-[#4f4b45] transition hover:border-[#8b6a35] hover:text-[#8b6a35] dark:border-white/12 dark:bg-white/5 dark:text-[#d6d1c8]"
             >
               {isDark ? (
                 <Moon className="h-4 w-4" aria-hidden="true" />
@@ -184,7 +184,7 @@ export function ResumeApp() {
               type="button"
               onClick={() => setLocale(nextLocale)}
               aria-label={`Switch language to ${currentResume.languageToggleLabel}`}
-              className="group inline-flex h-10 items-center justify-center gap-2 rounded-full border border-slate-300/80 bg-white/70 px-2.5 text-sm font-semibold text-slate-700 transition hover:border-cyan-500 hover:text-cyan-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cyan-500 dark:border-white/12 dark:bg-white/5 dark:text-slate-200 dark:hover:border-cyan-300 dark:hover:text-cyan-100"
+              className="group inline-flex h-10 items-center justify-center gap-2 rounded-full border border-black/15 bg-white/30 px-2.5 text-sm font-semibold text-[#4f4b45] transition hover:border-[#8b6a35] hover:text-[#8b6a35] dark:border-white/12 dark:bg-white/5 dark:text-[#d6d1c8]"
             >
               <Languages className="h-4 w-4" aria-hidden="true" />
               <span
@@ -209,7 +209,7 @@ export function ResumeApp() {
               onClick={() => setIsMenuOpen((value) => !value)}
               aria-label={currentResume.ui.menuToggle}
               aria-expanded={isMenuOpen}
-              className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-slate-300/80 bg-white/70 text-slate-700 transition hover:border-cyan-500 hover:text-cyan-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cyan-500 lg:hidden dark:border-white/12 dark:bg-white/5 dark:text-slate-200 dark:hover:border-cyan-300 dark:hover:text-cyan-100"
+              className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-black/15 bg-white/30 text-[#4f4b45] transition hover:border-[#8b6a35] hover:text-[#8b6a35] lg:hidden dark:border-white/12 dark:bg-white/5 dark:text-[#d6d1c8]"
             >
               {isMenuOpen ? (
                 <X className="h-5 w-5" aria-hidden="true" />
@@ -226,7 +226,7 @@ export function ResumeApp() {
               initial={{ opacity: 0, height: 0 }}
               animate={{ opacity: 1, height: "auto" }}
               exit={{ opacity: 0, height: 0 }}
-              className="border-t border-slate-200/80 bg-[#f7f8fb]/96 px-5 py-3 backdrop-blur-xl lg:hidden dark:border-white/10 dark:bg-[#05070c]/96"
+              className="border-t border-black/10 bg-[#f2efe8]/96 px-5 py-3 backdrop-blur-xl lg:hidden dark:border-white/10 dark:bg-[#11110f]/96"
             >
               <div className="mx-auto grid max-w-7xl gap-1">
                 {navItems.map((item) => (
@@ -240,7 +240,7 @@ export function ResumeApp() {
                     className={cn(
                       "rounded-md px-3 py-3 text-sm font-medium transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cyan-500",
                       activeSection === item.id
-                        ? "bg-cyan-500/12 text-cyan-700 dark:text-cyan-200"
+                        ? "bg-[#8b6a35]/10 text-[#8b6a35] dark:text-[#d4b071]"
                         : "text-slate-600 hover:bg-slate-900/5 hover:text-slate-950 dark:text-slate-300 dark:hover:bg-white/10 dark:hover:text-white",
                     )}
                   >

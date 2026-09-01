@@ -12,17 +12,17 @@ export function SectionHeader({
   icon: LucideIcon;
 }) {
   return (
-    <div className="mb-10 grid gap-5 md:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)] md:items-end md:gap-10">
+    <div className="mb-14 grid gap-6 md:grid-cols-[minmax(0,1.15fr)_minmax(0,0.85fr)] md:items-end md:gap-16">
       <div>
-        <div className="mb-4 inline-flex items-center gap-2 text-xs font-bold uppercase tracking-[0.22em] text-cyan-700 dark:text-cyan-200">
+        <div className="mb-5 inline-flex items-center gap-2 text-[0.68rem] font-semibold uppercase tracking-[0.28em] text-[#8b6a35] dark:text-[#d4b071]">
           <Icon className="h-4 w-4" aria-hidden="true" />
           {eyebrow}
         </div>
-        <h2 className="text-3xl font-semibold leading-tight tracking-[-0.025em] text-slate-950 sm:text-4xl dark:text-white">
+        <h2 className="font-editorial text-4xl font-normal leading-[1.04] tracking-[-0.035em] text-[#151512] sm:text-5xl lg:text-6xl dark:text-[#f1eee7]">
           {title}
         </h2>
       </div>
-      <p className="max-w-2xl text-sm leading-7 text-slate-500 sm:text-base sm:leading-8 dark:text-slate-400">
+      <p className="max-w-2xl border-s border-black/15 ps-5 text-sm leading-7 text-[#68645d] sm:text-base sm:leading-8 dark:border-white/15 dark:text-[#aaa59c]">
         {description}
       </p>
     </div>

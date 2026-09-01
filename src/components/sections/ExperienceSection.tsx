@@ -50,7 +50,7 @@ function ExperienceItem({
       <span
         aria-hidden="true"
         className={cn(
-          "absolute start-0 z-10 flex h-7 w-7 items-center justify-center rounded-full border border-cyan-500/40 bg-white text-[0.625rem] font-bold tabular-nums text-cyan-700 shadow-[0_0_0_5px_rgba(255,255,255,0.72)] dark:bg-slate-950 dark:text-cyan-200 dark:shadow-[0_0_0_5px_rgba(2,6,23,0.72)]",
+          "absolute start-0 z-10 flex h-7 w-7 items-center justify-center rounded-full border border-[#8b6a35]/50 bg-[#f2efe8] text-[0.625rem] font-bold tabular-nums text-[#8b6a35] shadow-[0_0_0_5px_rgba(242,239,232,0.8)] dark:bg-[#11110f] dark:text-[#d4b071] dark:shadow-[0_0_0_5px_rgba(17,17,15,0.8)]",
           markerPosition,
         )}
       >
@@ -66,11 +66,11 @@ function ExperienceItem({
       >
         <header className="grid min-w-0 gap-5 lg:grid-cols-[minmax(0,1fr)_13rem] lg:gap-10">
           <div className="min-w-0">
-            <h3 className="text-xl font-semibold leading-tight text-slate-950 [overflow-wrap:anywhere] sm:text-2xl dark:text-white">
+            <h3 className="font-editorial text-2xl font-normal leading-tight text-[#151512] [overflow-wrap:anywhere] sm:text-3xl dark:text-[#f1eee7]">
               {item.role}
             </h3>
             {label ? (
-              <p className="mt-2 text-sm font-semibold text-cyan-700 [overflow-wrap:anywhere] sm:text-base dark:text-cyan-200">
+              <p className="mt-2 text-sm font-semibold text-[#8b6a35] [overflow-wrap:anywhere] sm:text-base dark:text-[#d4b071]">
                 <bdi dir="auto">{label}</bdi>
               </p>
             ) : null}
@@ -105,7 +105,7 @@ function ExperienceItem({
             >
               <span
                 aria-hidden="true"
-                className="mt-[0.6875rem] h-1.5 w-1.5 rounded-full bg-cyan-600 dark:bg-cyan-300"
+                className="mt-[0.6875rem] h-1.5 w-1.5 rounded-full bg-[#8b6a35] dark:bg-[#d4b071]"
               />
               <span className="min-w-0 [overflow-wrap:anywhere]">
                 {highlight}
